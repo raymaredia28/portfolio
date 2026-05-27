@@ -47,7 +47,7 @@ export default function ProjectCard({ title, description, tags, href, repo }: Pr
       </div>
 
       {/* Description */}
-      <p className="text-sm text-zinc-500 leading-[1.75] flex-1">
+      <p className="text-sm text-zinc-400 leading-[1.75] flex-1">
         {description}
       </p>
 

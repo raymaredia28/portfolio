@@ -39,12 +39,12 @@ export default function Home() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-indigo-400 opacity-60" />
               <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-indigo-400" />
             </span>
-            Open to full-time roles · Graduating May 2026
+            Open to full-time roles · CS Graduate
           </span>
 
           {/* Heading */}
           <div className="flex flex-col gap-2">
-            <p className="text-lg text-zinc-500 font-normal">Hi, I&apos;m</p>
+            <p className="text-lg text-zinc-400 font-normal">Hi, I&apos;m</p>
             <h1 className="text-6xl sm:text-7xl font-bold tracking-tight leading-none">
               <span className="gradient-text">Rayaan</span>
               <span className="text-zinc-50"> Maredia</span>
@@ -52,9 +52,9 @@ export default function Home() {
           </div>
 
           {/* Tagline */}
-          <p className="text-lg text-zinc-400 leading-[1.8] max-w-xl">
-            CS student at <span className="text-zinc-200 font-medium">Texas A&M</span> and
-            former <span className="text-zinc-200 font-medium">Twilio SWE Intern</span>.
+          <p className="text-lg text-zinc-300 leading-[1.8] max-w-xl">
+            CS graduate from <span className="text-zinc-100 font-medium">Texas A&M</span> and
+            former <span className="text-zinc-100 font-medium">Twilio SWE Intern</span>.
             I build scalable backend systems and full-stack web apps — with clean code,
             solid tests, and a focus on shipping things that work.
           </p>
@@ -89,7 +89,7 @@ export default function Home() {
               { value: "3.84", label: "GPA" },
               { value: "Twilio", label: "Last internship" },
               { value: "Texas A&M", label: "University" },
-              { value: "May '26", label: "Available" },
+              { value: "May '26", label: "Graduated" },
             ].map(({ value, label }) => (
               <div key={label} className="flex flex-col gap-0.5 pt-4">
                 <span className="text-sm font-semibold text-zinc-100">{value}</span>
@@ -157,7 +157,7 @@ export default function Home() {
                 Let&apos;s build something together.
               </h2>
               <p className="text-zinc-400 text-sm leading-relaxed">
-                Graduating May 2026 · Actively looking for full-time SWE roles.
+                CS graduate from Texas A&M · Actively looking for full-time SWE roles.
               </p>
             </div>
             <Link

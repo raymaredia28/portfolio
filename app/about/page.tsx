@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "About — Rayaan Maredia",
-  description: "CS student at Texas A&M, former Twilio SWE intern, full-stack developer.",
+  description: "CS graduate from Texas A&M, former Twilio SWE intern, full-stack developer.",
 };
 
 const skills = {
@@ -54,26 +54,26 @@ export default function About() {
         <h1 className="text-4xl sm:text-5xl font-bold text-zinc-50 tracking-tight mb-8">
           Building things that matter.
         </h1>
-        <div className="flex flex-col gap-5 text-zinc-400 text-[15px] leading-[1.85]">
+        <div className="flex flex-col gap-5 text-zinc-300 text-[15px] leading-[1.85]">
           <p>
-            I&apos;m Rayaan — a Computer Science student at{" "}
-            <span className="text-zinc-200 font-medium">Texas A&M University</span> (Class of
-            &apos;26, 3.84 GPA) with an emphasis in Business. I&apos;m from Nederland, Texas,
+            I&apos;m Rayaan — a Computer Science graduate from{" "}
+            <span className="text-zinc-100 font-medium">Texas A&M University</span> (3.84 GPA,
+            Class of &apos;26) with an emphasis in Business. I&apos;m from Nederland, Texas,
             and I care deeply about building software that&apos;s fast, reliable, and
             genuinely useful.
           </p>
           <p>
-            Last summer I interned at{" "}
-            <span className="text-zinc-200 font-medium">Twilio</span> on the Billing Platform
+            Most recently I interned at{" "}
+            <span className="text-zinc-100 font-medium">Twilio</span> on the Billing Platform
             team, where I rewrote legacy PHP services in Spring Boot, shipped REST APIs, and
-            wrote production code used across the platform. Outside of work I&apos;ve led
+            wrote production code used across the platform. I&apos;ve also led
             full-stack projects, taught C++ to other students, and shipped everything from
             mobile apps to point-of-sale systems.
           </p>
           <p>
-            I&apos;m graduating in May 2026 and actively looking for full-time Software
-            Engineering roles. I work well in Agile teams, take testing seriously, and
-            love tackling hard backend problems.
+            I studied at Texas A&M from 2022 to 2026 and am now actively looking for
+            full-time Software Engineering roles. I work well in Agile teams, take
+            testing seriously, and love tackling hard backend problems.
           </p>
         </div>
 
@@ -175,7 +175,7 @@ export default function About() {
           Education
         </p>
         <h2 className="text-2xl font-bold text-zinc-50 tracking-tight mb-8">
-          Where I study
+          Where I studied
         </h2>
         <div className="rounded-xl border border-zinc-800 bg-zinc-900/60 p-6 sm:p-7">
           <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4">

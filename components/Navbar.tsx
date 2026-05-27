@@ -24,7 +24,7 @@ export default function Navbar() {
           href="/"
           className="text-base font-semibold tracking-tight text-zinc-50 hover:text-indigo-400 transition-colors duration-200"
         >
-          rayaan<span className="text-indigo-500">.</span>dev
+          Rayaan Maredia
         </Link>
 
         {/* Desktop nav */}
