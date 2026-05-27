@@ -53,6 +53,6 @@ All placeholder content is marked with `{/* TODO */}` comments. Update:
 - `components/Footer.tsx` — social links (GitHub, Twitter, LinkedIn, email)
 
 ## GitHub / deployment
-- Repo: to be created via `gh repo create`
+- Repo: https://github.com/raymaredia28/portfolio
 - Deployment target: Vercel (connect repo → auto-deploy on push to main)
 - When user describes a change, implement it, commit, and push to main
