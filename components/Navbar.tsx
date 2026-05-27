@@ -8,7 +8,6 @@ const links = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/projects", label: "Projects" },
-  { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -17,24 +16,27 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-zinc-800 bg-zinc-950/80 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-zinc-800/60 bg-zinc-950/75 backdrop-blur-xl">
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-        {/* Logo / name */}
+
+        {/* Logo */}
         <Link
           href="/"
-          className="text-lg font-semibold tracking-tight text-zinc-50 hover:text-indigo-400 transition-colors"
+          className="text-base font-semibold tracking-tight text-zinc-50 hover:text-indigo-400 transition-colors duration-200"
         >
           rayaan<span className="text-indigo-500">.</span>dev
         </Link>
 
-        {/* Desktop links */}
-        <ul className="hidden md:flex items-center gap-8">
+        {/* Desktop nav */}
+        <ul className="hidden md:flex items-center gap-7">
           {links.map(({ href, label }) => (
             <li key={href}>
               <Link
                 href={href}
-                className={`text-sm font-medium transition-colors hover:text-indigo-400 ${
-                  pathname === href ? "text-indigo-400" : "text-zinc-400"
+                className={`text-sm transition-colors duration-200 hover:text-zinc-50 ${
+                  pathname === href
+                    ? "text-zinc-50 font-medium"
+                    : "text-zinc-400 font-normal"
                 }`}
               >
                 {label}
@@ -44,12 +46,12 @@ export default function Navbar() {
         </ul>
 
         {/* Desktop CTA */}
-        <a
-          href="mailto:raymaredia28@gmail.com"
-          className="hidden md:inline-flex items-center gap-2 rounded-full bg-indigo-500 px-4 py-1.5 text-sm font-medium text-white hover:bg-indigo-400 transition-colors"
+        <Link
+          href="/contact"
+          className="hidden md:inline-flex items-center gap-1.5 rounded-full border border-zinc-700 bg-zinc-900 px-4 py-1.5 text-sm font-medium text-zinc-300 hover:border-indigo-500/60 hover:text-zinc-50 transition-all duration-200"
         >
-          Hire me
-        </a>
+          Contact me
+        </Link>
 
         {/* Mobile hamburger */}
         <button
@@ -57,35 +59,23 @@ export default function Navbar() {
           className="md:hidden flex flex-col gap-1.5 p-1"
           aria-label="Toggle menu"
         >
-          <span
-            className={`block h-0.5 w-6 bg-zinc-50 transition-transform duration-300 ${
-              open ? "translate-y-2 rotate-45" : ""
-            }`}
-          />
-          <span
-            className={`block h-0.5 w-6 bg-zinc-50 transition-opacity duration-300 ${
-              open ? "opacity-0" : ""
-            }`}
-          />
-          <span
-            className={`block h-0.5 w-6 bg-zinc-50 transition-transform duration-300 ${
-              open ? "-translate-y-2 -rotate-45" : ""
-            }`}
-          />
+          <span className={`block h-px w-5 bg-zinc-400 transition-all duration-300 ${open ? "translate-y-2 rotate-45" : ""}`} />
+          <span className={`block h-px w-5 bg-zinc-400 transition-all duration-300 ${open ? "opacity-0" : ""}`} />
+          <span className={`block h-px w-5 bg-zinc-400 transition-all duration-300 ${open ? "-translate-y-2 -rotate-45" : ""}`} />
         </button>
       </nav>
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden border-t border-zinc-800 bg-zinc-950 px-6 py-4">
-          <ul className="flex flex-col gap-4">
+        <div className="md:hidden border-t border-zinc-800 bg-zinc-950 px-6 pb-6 pt-4">
+          <ul className="flex flex-col gap-5">
             {links.map(({ href, label }) => (
               <li key={href}>
                 <Link
                   href={href}
                   onClick={() => setOpen(false)}
-                  className={`text-sm font-medium transition-colors hover:text-indigo-400 ${
-                    pathname === href ? "text-indigo-400" : "text-zinc-300"
+                  className={`text-sm transition-colors hover:text-zinc-50 ${
+                    pathname === href ? "text-zinc-50 font-medium" : "text-zinc-400"
                   }`}
                 >
                   {label}
@@ -93,12 +83,15 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          <a
-            href="mailto:raymaredia28@gmail.com"
-            className="mt-4 inline-flex items-center gap-2 rounded-full bg-indigo-500 px-4 py-1.5 text-sm font-medium text-white hover:bg-indigo-400 transition-colors"
-          >
-            Hire me
-          </a>
+          <div className="mt-6 pt-6 border-t border-zinc-800">
+            <Link
+              href="/contact"
+              onClick={() => setOpen(false)}
+              className="inline-flex items-center gap-1.5 rounded-full border border-zinc-700 px-4 py-1.5 text-sm font-medium text-zinc-300"
+            >
+              Contact me
+            </Link>
+          </div>
         </div>
       )}
     </header>

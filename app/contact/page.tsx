@@ -42,11 +42,16 @@ const socials = [
 export default function Contact() {
   return (
     <div className="mx-auto max-w-5xl px-6 py-20">
-      <div className="mb-12">
-        <h1 className="text-4xl font-bold text-zinc-50 mb-3">Get in touch</h1>
-        <p className="text-zinc-400 max-w-xl">
+      <div className="mb-14">
+        <p className="text-xs font-semibold uppercase tracking-[0.15em] text-indigo-500 mb-3">
+          Contact
+        </p>
+        <h1 className="text-4xl sm:text-5xl font-bold text-zinc-50 tracking-tight mb-4">
+          Get in touch
+        </h1>
+        <p className="text-[15px] text-zinc-400 leading-relaxed max-w-lg">
           Have a project in mind, want to talk about a role, or just want to say hi?
-          I&apos;d love to hear from you. I typically respond within a day or two.
+          I&apos;d love to hear from you — I typically respond within a day or two.
         </p>
       </div>
 
