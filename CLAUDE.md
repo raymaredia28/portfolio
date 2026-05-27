@@ -54,5 +54,6 @@ All placeholder content is marked with `{/* TODO */}` comments. Update:
 
 ## GitHub / deployment
 - Repo: https://github.com/raymaredia28/portfolio
-- Deployment target: Vercel (connect repo → auto-deploy on push to main)
-- When user describes a change, implement it, commit, and push to main
+- Live URL: https://portfolio-ochre-xi-cr113oghtm.vercel.app
+- Deploy command: `npx vercel --prod --yes` (run from portfolio directory)
+- Workflow: implement change → commit → git push → npx vercel --prod --yes
