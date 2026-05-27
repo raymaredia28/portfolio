@@ -1,65 +1,147 @@
-import Image from "next/image";
+import Link from "next/link";
+import ProjectCard, { Project } from "@/components/ProjectCard";
+
+// TODO: Replace with your real featured projects
+const featured: Project[] = [
+  {
+    title: "Project Alpha",
+    description:
+      "A full-stack web app that does something really cool. Built to solve a real problem with clean, scalable code.",
+    tags: ["Next.js", "TypeScript", "PostgreSQL"],
+    href: "https://example.com",
+    repo: "https://github.com/raamizmaredia/project-alpha",
+    featured: true,
+  },
+  {
+    title: "Project Beta",
+    description:
+      "An open-source tool that developers actually use. Highlights your ability to ship clean, documented software.",
+    tags: ["Python", "FastAPI", "Docker"],
+    repo: "https://github.com/raamizmaredia/project-beta",
+    featured: true,
+  },
+  {
+    title: "Project Gamma",
+    description:
+      "A mobile-first experience with slick animations and great UX. Shows your eye for design and detail.",
+    tags: ["React Native", "Expo", "Supabase"],
+    href: "https://example.com",
+    featured: true,
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <>
+      {/* ── Hero ── */}
+      <section className="mx-auto max-w-5xl px-6 pt-24 pb-20">
+        <div className="flex flex-col gap-6 max-w-2xl">
+          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-4 py-1.5 text-sm text-indigo-400">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-indigo-400 opacity-75" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-indigo-500" />
+            </span>
+            Open to opportunities
+          </div>
+
+          <h1 className="text-5xl sm:text-6xl font-bold tracking-tight text-zinc-50 leading-tight">
+            Hi, I&apos;m{" "}
+            <span className="text-indigo-400">Raamiz</span>
+            .
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+
+          {/* TODO: update tagline */}
+          <p className="text-xl text-zinc-400 leading-relaxed">
+            I build{" "}
+            <span className="text-zinc-50 font-medium">fast, beautiful software</span>{" "}
+            that people actually enjoy using. Full-stack developer with a passion for
+            clean code, great design, and shipping things that matter.
           </p>
+
+          <div className="flex flex-wrap gap-3 pt-2">
+            <Link
+              href="/projects"
+              className="inline-flex items-center gap-2 rounded-full bg-indigo-500 px-6 py-2.5 text-sm font-semibold text-white hover:bg-indigo-400 transition-colors"
+            >
+              View my work
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 rounded-full border border-zinc-700 px-6 py-2.5 text-sm font-semibold text-zinc-300 hover:border-zinc-500 hover:text-zinc-50 transition-colors"
+            >
+              Get in touch
+            </Link>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* ── Tech stack pills ── */}
+      <section className="border-y border-zinc-800 bg-zinc-900/50 py-6">
+        <div className="mx-auto max-w-5xl px-6">
+          <div className="flex flex-wrap items-center gap-x-8 gap-y-3">
+            <span className="text-xs font-medium uppercase tracking-widest text-zinc-600">
+              Stack
+            </span>
+            {[
+              "TypeScript",
+              "React",
+              "Next.js",
+              "Node.js",
+              "Python",
+              "PostgreSQL",
+              "Docker",
+              "Tailwind CSS",
+            ].map((tech) => (
+              <span key={tech} className="text-sm text-zinc-400">
+                {tech}
+              </span>
+            ))}
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* ── Featured projects ── */}
+      <section className="mx-auto max-w-5xl px-6 py-20">
+        <div className="flex items-end justify-between mb-10">
+          <div>
+            <h2 className="text-3xl font-bold text-zinc-50">Featured Projects</h2>
+            <p className="mt-2 text-zinc-400">A few things I&apos;ve built recently.</p>
+          </div>
+          <Link
+            href="/projects"
+            className="text-sm text-indigo-400 hover:text-indigo-300 transition-colors hidden sm:block"
+          >
+            View all →
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {featured.map((project) => (
+            <ProjectCard key={project.title} {...project} />
+          ))}
+        </div>
+      </section>
+
+      {/* ── CTA banner ── */}
+      <section className="mx-auto max-w-5xl px-6 pb-24">
+        <div className="rounded-2xl border border-indigo-500/20 bg-indigo-500/5 px-8 py-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+          <div>
+            <h2 className="text-2xl font-bold text-zinc-50">Let&apos;s build something together.</h2>
+            <p className="mt-1 text-zinc-400">
+              I&apos;m always down to hear about interesting problems and cool projects.
+            </p>
+          </div>
+          <Link
+            href="/contact"
+            className="shrink-0 inline-flex items-center gap-2 rounded-full bg-indigo-500 px-6 py-2.5 text-sm font-semibold text-white hover:bg-indigo-400 transition-colors"
+          >
+            Say hello →
+          </Link>
+        </div>
+      </section>
+    </>
   );
 }
