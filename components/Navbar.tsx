@@ -24,7 +24,7 @@ export default function Navbar() {
           href="/"
           className="text-lg font-semibold tracking-tight text-zinc-50 hover:text-indigo-400 transition-colors"
         >
-          raamiz<span className="text-indigo-500">.</span>dev
+          rayaan<span className="text-indigo-500">.</span>dev
         </Link>
 
         {/* Desktop links */}
@@ -34,9 +34,7 @@ export default function Navbar() {
               <Link
                 href={href}
                 className={`text-sm font-medium transition-colors hover:text-indigo-400 ${
-                  pathname === href
-                    ? "text-indigo-400"
-                    : "text-zinc-400"
+                  pathname === href ? "text-indigo-400" : "text-zinc-400"
                 }`}
               >
                 {label}
@@ -47,7 +45,7 @@ export default function Navbar() {
 
         {/* Desktop CTA */}
         <a
-          href="mailto:raamizmaredia@gmail.com"
+          href="mailto:raymaredia28@gmail.com"
           className="hidden md:inline-flex items-center gap-2 rounded-full bg-indigo-500 px-4 py-1.5 text-sm font-medium text-white hover:bg-indigo-400 transition-colors"
         >
           Hire me
@@ -96,7 +94,7 @@ export default function Navbar() {
             ))}
           </ul>
           <a
-            href="mailto:raamizmaredia@gmail.com"
+            href="mailto:raymaredia28@gmail.com"
             className="mt-4 inline-flex items-center gap-2 rounded-full bg-indigo-500 px-4 py-1.5 text-sm font-medium text-white hover:bg-indigo-400 transition-colors"
           >
             Hire me

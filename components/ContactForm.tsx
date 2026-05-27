@@ -9,7 +9,7 @@ export default function ContactForm() {
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("sending");
-    // TODO: Replace with real API call
+    // TODO: Replace with real API call (e.g. Resend or Formspree pointing to raymaredia28@gmail.com)
     setTimeout(() => setStatus("done"), 1200);
   }
 

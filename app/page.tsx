@@ -1,31 +1,26 @@
 import Link from "next/link";
 import ProjectCard, { Project } from "@/components/ProjectCard";
 
-// TODO: Replace with your real featured projects
 const featured: Project[] = [
   {
-    title: "Project Alpha",
+    title: "DegreeFlow CS Degree Planner",
     description:
-      "A full-stack web app that does something really cool. Built to solve a real problem with clean, scalable code.",
-    tags: ["Next.js", "TypeScript", "PostgreSQL"],
-    href: "https://example.com",
-    repo: "https://github.com/raamizmaredia/project-alpha",
+      "Full-stack degree planning app for TAMU CS students. Built a three-layer PDF parsing pipeline and a rule-based evaluation engine validated by 182 automated tests. Achieved 4.6/5 usability in UAT.",
+    tags: ["React", "Next.js", "Firestore", "Python"],
     featured: true,
   },
   {
-    title: "Project Beta",
+    title: "Panda Express POS System",
     description:
-      "An open-source tool that developers actually use. Highlights your ability to ship clean, documented software.",
-    tags: ["Python", "FastAPI", "Docker"],
-    repo: "https://github.com/raamizmaredia/project-beta",
+      "Led a 4-member Agile team to build a full point-of-sale system. Implemented ~50% of backend APIs with Next.js and PostgreSQL and designed a responsive, accessible UI with Tailwind CSS.",
+    tags: ["Next.js", "PostgreSQL", "Tailwind CSS", "Agile"],
     featured: true,
   },
   {
-    title: "Project Gamma",
+    title: "Split Mobile App",
     description:
-      "A mobile-first experience with slick animations and great UX. Shows your eye for design and detail.",
-    tags: ["React Native", "Expo", "Supabase"],
-    href: "https://example.com",
+      "Designed and built the calendar UI for a social-media-style roommate discovery app. Created Figma mockups and implemented them in React Native with dynamic color and interaction logic.",
+    tags: ["React Native", "Figma", "UI/UX"],
     featured: true,
   },
 ];
@@ -41,21 +36,22 @@ export default function Home() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-indigo-400 opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-indigo-500" />
             </span>
-            Open to opportunities
+            Open to full-time opportunities — May 2026
           </div>
 
           <h1 className="text-5xl sm:text-6xl font-bold tracking-tight text-zinc-50 leading-tight">
             Hi, I&apos;m{" "}
-            <span className="text-indigo-400">Raamiz</span>
+            <span className="text-indigo-400">Rayaan</span>
             .
           </h1>
 
-          {/* TODO: update tagline */}
           <p className="text-xl text-zinc-400 leading-relaxed">
-            I build{" "}
-            <span className="text-zinc-50 font-medium">fast, beautiful software</span>{" "}
-            that people actually enjoy using. Full-stack developer with a passion for
-            clean code, great design, and shipping things that matter.
+            CS student at{" "}
+            <span className="text-zinc-50 font-medium">Texas A&M</span>{" "}
+            (3.84 GPA, Class of &apos;26) and former{" "}
+            <span className="text-zinc-50 font-medium">Twilio SWE Intern</span>
+            . I build scalable backend systems and full-stack apps — clean code,
+            solid tests, shipped on time.
           </p>
 
           <div className="flex flex-wrap gap-3 pt-2">
@@ -78,7 +74,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Tech stack pills ── */}
+      {/* ── Tech stack strip ── */}
       <section className="border-y border-zinc-800 bg-zinc-900/50 py-6">
         <div className="mx-auto max-w-5xl px-6">
           <div className="flex flex-wrap items-center gap-x-8 gap-y-3">
@@ -86,13 +82,14 @@ export default function Home() {
               Stack
             </span>
             {[
+              "Java",
+              "Spring Boot",
               "TypeScript",
               "React",
               "Next.js",
-              "Node.js",
-              "Python",
               "PostgreSQL",
               "Docker",
+              "Python",
               "Tailwind CSS",
             ].map((tech) => (
               <span key={tech} className="text-sm text-zinc-400">
@@ -108,7 +105,7 @@ export default function Home() {
         <div className="flex items-end justify-between mb-10">
           <div>
             <h2 className="text-3xl font-bold text-zinc-50">Featured Projects</h2>
-            <p className="mt-2 text-zinc-400">A few things I&apos;ve built recently.</p>
+            <p className="mt-2 text-zinc-400">A few things I&apos;ve shipped recently.</p>
           </div>
           <Link
             href="/projects"
@@ -131,7 +128,7 @@ export default function Home() {
           <div>
             <h2 className="text-2xl font-bold text-zinc-50">Let&apos;s build something together.</h2>
             <p className="mt-1 text-zinc-400">
-              I&apos;m always down to hear about interesting problems and cool projects.
+              Graduating May 2026 and actively looking for full-time SWE roles.
             </p>
           </div>
           <Link

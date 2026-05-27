@@ -15,14 +15,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Raamiz Maredia — Developer & Designer",
+  title: "Rayaan Maredia — Software Engineer",
   description:
-    "Personal website of Raamiz Maredia — software developer, designer, and builder of cool things.",
+    "Computer Science student at Texas A&M. Backend systems, full-stack development, and clean code.",
   openGraph: {
-    title: "Raamiz Maredia",
-    description: "Software developer, designer, and builder of cool things.",
-    url: "https://raamiz.dev",
-    siteName: "Raamiz Maredia",
+    title: "Rayaan Maredia",
+    description:
+      "Computer Science student at Texas A&M. Backend systems, full-stack development, and clean code.",
+    url: "https://rayaanmaredia.dev",
+    siteName: "Rayaan Maredia",
     locale: "en_US",
     type: "website",
   },

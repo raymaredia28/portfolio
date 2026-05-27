@@ -2,56 +2,31 @@ import type { Metadata } from "next";
 import ProjectCard, { Project } from "@/components/ProjectCard";
 
 export const metadata: Metadata = {
-  title: "Projects — Raamiz Maredia",
-  description: "Things I've built — side projects, open source, and client work.",
+  title: "Projects — Rayaan Maredia",
+  description: "Full-stack apps, backend systems, and side projects built by Rayaan Maredia.",
 };
 
-// TODO: Replace with your real projects
 const projects: Project[] = [
   {
-    title: "Project Alpha",
+    title: "DegreeFlow CS Degree Planner",
     description:
-      "A full-stack web app that does something really cool. Built to solve a real problem with clean, scalable code.",
-    tags: ["Next.js", "TypeScript", "PostgreSQL"],
-    href: "https://example.com",
-    repo: "https://github.com/raamizmaredia/project-alpha",
+      "Led a 4-member team to ship a full-stack degree planning app for TAMU CS students. Built a three-layer PDF parsing pipeline (pdfplumber, AI API, OCR fallback) to extract and normalize transcript data, plus a rule-based evaluation engine validated by 182 automated tests. Achieved 4.6/5 usability and 4.4/5 preference over the existing Howdy planner in UAT.",
+    tags: ["React", "Next.js", "Firestore", "Python", "AI/OCR"],
     featured: true,
   },
   {
-    title: "Project Beta",
+    title: "Panda Express Point of Sales System",
     description:
-      "An open-source CLI tool that makes a tedious developer task fast and painless.",
-    tags: ["Python", "FastAPI", "Docker"],
-    repo: "https://github.com/raamizmaredia/project-beta",
+      "Managed Agile coordination and led weekly scrums across a 4-member team. Implemented ~50% of backend APIs with Next.js and PostgreSQL, and designed a responsive, accessible UI with Tailwind CSS for restaurant management and daily transactions.",
+    tags: ["Next.js", "PostgreSQL", "Tailwind CSS", "Agile/Scrum"],
+    featured: true,
   },
   {
-    title: "Project Gamma",
+    title: "Split Mobile App",
     description:
-      "Mobile-first experience with great animations and UX. Shows attention to design and interaction detail.",
-    tags: ["React Native", "Expo", "Supabase"],
-    href: "https://example.com",
-  },
-  {
-    title: "Project Delta",
-    description:
-      "Internal tool that saved a team hours per week. Sometimes the best projects are the boring utility ones.",
-    tags: ["Node.js", "Express", "MongoDB"],
-    repo: "https://github.com/raamizmaredia/project-delta",
-  },
-  {
-    title: "Project Epsilon",
-    description:
-      "An experiment with a new technology I wanted to learn. Sometimes building is the best way to understand.",
-    tags: ["Rust", "WebAssembly"],
-    repo: "https://github.com/raamizmaredia/project-epsilon",
-  },
-  {
-    title: "Project Zeta",
-    description:
-      "A browser extension that makes one specific thing about browsing the web a lot better.",
-    tags: ["JavaScript", "Chrome Extensions", "Manifest V3"],
-    href: "https://example.com",
-    repo: "https://github.com/raamizmaredia/project-zeta",
+      "UI/UX designer for a social-media-style roommate discovery app built with a 10-member team. Crafted an intuitive calendar UI in Figma and implemented it in React Native with dynamic color changes and interaction logic triggered by user events.",
+    tags: ["React Native", "Expo", "Figma", "UI/UX"],
+    featured: true,
   },
 ];
 
@@ -61,8 +36,8 @@ export default function Projects() {
       <div className="mb-12">
         <h1 className="text-4xl font-bold text-zinc-50 mb-3">Projects</h1>
         <p className="text-zinc-400 max-w-xl">
-          Things I&apos;ve built — side projects, open source contributions, client work,
-          and experiments. Each one taught me something new.
+          Things I&apos;ve built — from full-stack web apps and mobile UIs to backend systems
+          and developer tools. Each project shipped to real users.
         </p>
       </div>
 
